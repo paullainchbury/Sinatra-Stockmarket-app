@@ -1,0 +1,23 @@
+<form action='/home' method='get'>
+  <label>Enter the stock symbol:</label>
+  <input type='text' name='stock_symbol'>
+  <button>Get a quote!</button>
+</form>
+
+
+
+
+<% if @stock_symbol %>
+<section>
+  <header>
+    <h1>Latest stock price for <%= @stock.name %> (<%= @stock_symbol %>)</h1>
+    <span class='blink_me'>
+      $<%= @stock.lastTrade %>
+    </span></p>
+
+  </header>
+</section>
+<% end %>
+
+
+
